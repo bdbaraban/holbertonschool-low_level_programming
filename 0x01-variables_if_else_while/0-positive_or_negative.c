@@ -11,7 +11,7 @@
  * main - Prints a random number and states whether
  *        it is positive, negative, or zero.
  *
- * Return: 0 if successful.
+ * Return: 0 if successful, non-zero otherwise.
 */
 int main(void)
 {
