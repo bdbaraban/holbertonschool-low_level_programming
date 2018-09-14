@@ -3,4 +3,6 @@ This repository contains the following two projects completed for the low-level 
 * 0x00. C - Hello, World
 * 0x01. C - Variables, if, else, while
 
-![alt text](http://www.holbertonschool.com/holberton-logo.png "Holberton logo")
+<p align="center">
+  <img src="http://www.holbertonschool.com/holberton-logo.png">
+</p>
