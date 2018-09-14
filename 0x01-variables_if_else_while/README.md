@@ -52,6 +52,3 @@ In this project, I learned about using operators, variables and loops in C.
   * `00 01` and `01 00` are considered the same as the combination of of the numbers `0` and `1`.
   * Combinations of numbers are separated by `,`, followed by a space.
   * Combinations of numbers are printed in ascending order.
-
-![alt text][logo]
-[logo]: https://camo.githubusercontent.com/34ce495e1082f803ceb33a997dc46d34bd7555f5/68747470733a2f2f7777772e686f6c626572746f6e7363686f6f6c2e636f6d2f6173736574732f686f6c626572746f6e2d6c6f676f2d316363343531323630636133636432393764656635336632323530613937393438313036363763376361376235666135383739613536396134353762663136662e706e67
