@@ -7,7 +7,7 @@
 
 /**
  * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
- *        separated by a comma followed by a new line.
+ *        separated by a comma followed by a space.
  *
  * Return: Always 0.
  */
@@ -16,7 +16,7 @@ int main(void)
 	int count = 0;
 	float fib1 = 0, fib2 = 1, sum;
 
-	while (count < 50)
+	while (count < 51)
 	{
 		sum = fib1 + fib2;
 		printf("%.0f", sum);
@@ -24,7 +24,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
-		if (count == 49)
+		if (count == 50)
 			printf("\n");
 		else
 			printf(", ");
@@ -33,4 +33,3 @@ int main(void)
 
 	return (0);
 }
-
