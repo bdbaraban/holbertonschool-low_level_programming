@@ -4,6 +4,7 @@
  */
 
 #include "holberton.h"
+#include "stdlib.h"
 
 /**
  * print_to_98 - Prints all natural numbers from input value to 98,
@@ -20,6 +21,7 @@ void print_to_98(int n)
 				_putchar((n / 100) + '0');
 			_putchar(((n / 10) % 10) + '0');
 			_putchar((n % 10) + '0');
+
 			if (n == 98)
 				break;
 			_putchar(',');
@@ -32,18 +34,12 @@ void print_to_98(int n)
 		while (n <= 98)
 		{
 			if (n < 0)
-			{
 				_putchar('-');
-				if (n <= -10)
-					_putchar((-n / 10) + '0');
-				_putchar((-n % 10) + '0');
-			}
-			else
-			{
-				if (n >= 10)
-					_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
+
+			if (abs(n) >= 10)
+				_putchar((abs(n) / 10) + '0');
+			_putchar((abs(n) % 10) + '0');
+
 			if (n == 98)
 				break;
 			_putchar(',');
