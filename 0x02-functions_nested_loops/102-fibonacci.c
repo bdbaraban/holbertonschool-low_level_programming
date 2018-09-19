@@ -16,7 +16,7 @@ int main(void)
 	int count = 0;
 	float fib1 = 1, fib2 = 0, sum;
 
-	while (count < 51)
+	while (count < 50)
 	{
 		sum = fib1 + fib2;
 		printf("%.0f", sum);
@@ -24,7 +24,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
-		if (count == 50)
+		if (count == 49)
 			printf("\n");
 		else
 			printf(", ");
