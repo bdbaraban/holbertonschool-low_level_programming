@@ -2,6 +2,7 @@ This repository contains the following two projects completed for the low-level 
 
 * 0x00. C - Hello, World
 * 0x01. C - Variables, if, else, while
+* 0x02. C - Functions, nested loops
 
 <p align="center">
   <img src="http://www.holbertonschool.com/holberton-logo.png">
