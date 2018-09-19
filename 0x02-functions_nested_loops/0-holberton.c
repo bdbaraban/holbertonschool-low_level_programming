@@ -9,7 +9,7 @@
 /**
  * main - Prints "Holberton" followed by a new line.
  *
- * Return: 0 is successful, non-zero otherwise.
+ * Return: Always 0.
  */
 int main(void)
 {
