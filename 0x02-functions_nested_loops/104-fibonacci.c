@@ -14,6 +14,7 @@
 int main(void)
 {
 	int count = 0;
+
 	long double fib1 = 0, fib2 = 1, sum;
 
 	while (count < 96)
