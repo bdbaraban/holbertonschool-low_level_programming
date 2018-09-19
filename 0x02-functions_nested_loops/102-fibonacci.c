@@ -14,12 +14,12 @@
 int main(void)
 {
 	int count = 0;
-	float fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
 	while (count < 50)
 	{
 		sum = fib1 + fib2;
-		printf("%.0f", sum);
+		printf("%lu", sum);
 
 		fib1 = fib2;
 		fib2 = sum;
