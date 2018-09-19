@@ -13,11 +13,13 @@
  */
 int main(void)
 {
-	int count = 0;
+	int count = 2;
 
-	long double fib1 = 0, fib2 = 1, sum;
+	long double fib1 = 1, fib2 = 2, sum;
 
-	while (count < 96)
+	printf("1, 2, ");
+
+	while (count < 98)
 	{
 		sum = fib1 + fib2;
 		printf("%.0Lf", sum);
@@ -25,7 +27,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
-		if (count == 95)
+		if (count == 97)
 			printf("\n");
 		else
 			printf(", ");
