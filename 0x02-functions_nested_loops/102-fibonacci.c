@@ -14,7 +14,7 @@
 int main(void)
 {
 	int count = 0;
-	float fib1 = 0, fib2 = 1, sum;
+	float fib1 = 1, fib2 = 0, sum;
 
 	while (count < 51)
 	{
