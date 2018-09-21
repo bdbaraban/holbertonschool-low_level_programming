@@ -5,6 +5,7 @@
 
 #include "holberton.h"
 
+void shift(int num);
 /**
  * shift - Prints an integer one digit at a time.
  * @num: The integer to be printed.
