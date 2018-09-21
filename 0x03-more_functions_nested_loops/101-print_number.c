@@ -11,6 +11,8 @@
  */
 void print_number(int n)
 {
+	n = (unsigned)n;
+
 	if (n < 0)
 	{
 		_putchar('-');
