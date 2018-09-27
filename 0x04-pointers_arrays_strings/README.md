@@ -1,8 +1,11 @@
 In this project, I learned about using pointers, arrays, and strings in C.
 
+---
+
 * `holberton.h`: Header file containing prototypes for all functions written in the project.
 * `_putchar.c`: C function that writes a character to `stdout`.
 
+---
 
 * `0-reset_to_98.c`: C function that takes a pointer to an `int` as a parameter and updates the value it points to to `98`.
 * `1-swap.c`: C function that swaps the value of two integers.

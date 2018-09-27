@@ -1,5 +1,7 @@
 In this project, I learned about compilation, entry points, and text-printing functions in C.
 
+---
+
 * `0-preprocessor`: Script that runs a C file saved in the variable `$CFILE` through the preprocessor and saves the result in the file `c`.
 * `1-compiler`: Script that compiles a C file saved in the variable `$CFILE` that does not link; saves the result in an output file of the same name but with a `.o` extension.
 * `2-assembler`: Script that generates the assembly code of a C code saved in the variable `$CFILE`; saves the result in an output file of the same name but with a `.s` extension.
