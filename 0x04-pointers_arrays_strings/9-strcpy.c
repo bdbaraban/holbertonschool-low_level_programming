@@ -20,10 +20,8 @@ char *_strcpy(char *dest, char *src)
 	while (src[index++])
 		len++;
 
-	for (index = 0; index < len; index++)
+	for (index = 0; index <= len; index++)
 		dest[index] = src[index];
-
-	dest[index + 1] = '\0';
 
 	return (dest);
 }
