@@ -1,8 +1,11 @@
 In this project, I learned about using nested loops, including header files, and writing functions in C.
 
+---
+
 * `holberton.h`: Header file containing prototypes for all functions written in the project.
 * `_putchar.c`: C function that writes a character to `stdout`.
 
+---
 
 * `0-holberton.c`: C program that prints `Holberton`, followed by a new line. Returns 0.
 * `1-alphabet.c`: C function that prints the alphabet in lowercase, followed by a new line.
