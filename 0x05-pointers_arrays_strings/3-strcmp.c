@@ -16,12 +16,15 @@
  */
 int _strcmp(char *s1, char *s2)
 {
+	int index = 0;
 	int s1_len = 0, s2_len = 0;
 
-	while (*s1++)
+	while (s1[index++])
 		s1_len++;
 
-	while (*s2++)
+	index = 0;
+
+	while (s2[index++])
 		s2_len++;
 
 	if (s1_len > s2_len)
