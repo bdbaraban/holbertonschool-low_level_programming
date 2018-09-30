@@ -49,19 +49,18 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			n1_len--;
 		}
 
+		r[r_len] = '\0';
+
 		if (carry && (r_len + 1 < size_r))
 		{
 			for (index = r_len; index >= 0; index--)
 				r[index] = r[index - 1];
 			r[0] = (carry % 10) + '0';
+			r[r_len + 1] = '\0';
 		}
 
 		else if (carry && (r_len + 1 >= size_r))
 				return (0);
-
-		r[r_len + 1] = '\0';
-
-
 	}
 
 	else
@@ -84,11 +83,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			n2_len--;
 		}
 
+		r[r_len] = '\0';
+
 		if (carry && (r_len + 1 < size_r))
 		{
 			for (index = n2_len; index >= 0; index--)
 				r[index] = r[index - 1];
 			r[0] = (carry % 10) + '0';
+			r[r_len + 1] = '\0';
 		}
 
 		else if (carry && (r_len + 1 >= size_r))
