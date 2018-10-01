@@ -7,12 +7,12 @@
 
 /**
  * add_strings - Adds the numbers stored in two strings.
- * @big: The string containing the larger of the two numbers.
- * @small: The string containing the smaller of the two numbers.
- * @r: The string to store the added numbers.
+ * @big: The larger number.
+ * @small: The smaller number.
+ * @r: The buffer to store the result.
  * @big_len: The length of big.
  * @small_len: The length of small.
- * @size_r: The number of elements in r.
+ * @size_r: The buffer size.
  *
  * Return: If r can store the sum - a pointer to the result.
  *         If r cannot store the sum - 0.
@@ -59,7 +59,7 @@ char *add_strings(char *big, char *small, char *r,
  * infinite_add - Adds two numbers.
  * @n1: The first number to be added.
  * @n2: The second number to be added.
- * @r: The buffer used to store the result.
+ * @r: The buffer to store the result.
  * @size_r: The buffer size.
  *
  * Return: If r can store the sum - a pointer to the result.
