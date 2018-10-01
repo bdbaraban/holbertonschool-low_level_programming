@@ -16,21 +16,24 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int index;
+	int index, needle_len = 0;
+
+	for (index = 0; needle[index]; index++)
+		needle_len++;
 
 	while (*haystack)
 	{
-		for (index = 0; needle[index]; index++)
+		for (index = 0; index < needle_len; index++)
 		{
 			if (haystack[index] != needle[index])
 				break;
 
-			if (needle[index + 1] == 0)
+			if (index == needle_len - 1)
 				return (haystack);
 		}
 
 		haystack++;
 	}
 
-	return (haystack);
+	return ('\0');
 }
