@@ -17,22 +17,26 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int index, needle_len = 0;
+	char *hay_cpy, *needle_cpy;
 
-	for (index = 0; needle[index]; index++)
+	hay_cpy = haystack;
+	needle_cpy = needle;
+
+	for (index = 0; needle_cpy[index]; index++)
 		needle_len++;
 
-	while (*haystack >= '\0')
+	while (*hay_cpy)
 	{
 		for (index = 0; index < needle_len; index++)
 		{
-			if (haystack[index] != needle[index])
+			if (hay_cpy[index] != needle_cpy[index])
 				break;
 
 			if (index == needle_len - 1)
-				return (haystack);
+				return (hay_cpy);
 		}
 
-		haystack++;
+		hay_cpy++;
 	}
 
 	return ('\0');
