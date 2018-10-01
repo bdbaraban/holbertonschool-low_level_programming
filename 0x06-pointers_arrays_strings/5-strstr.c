@@ -17,21 +17,27 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int indx1, indx2, needle_len = 0;
+	int index, needle_len = 0;
 
-	for (indx1 = 0; needle[indx1]; indx1++)
+	for (index = 0; needle[index]; index++)
 		needle_len++;
 
-	for (indx1 = 0; haystack[indx1]; indx1++)
+	while (*haystack)
 	{
-		for (indx2 = 0; needle[indx2]; indx2++)
-		{
-			if (haystack[indx1 + indx2] != needle[indx2])
-				break;
+		index = 0;
 
-			if (indx2 == needle_len - 1)
-				return (haystack + indx1);
+		if (haystack[index] == needle[index])
+		{
+			while (haystack[index] == needle[index])
+			{
+				if (index == needle_len - 1)
+					return (haystack);
+
+				index++;
+			}
 		}
+
+		haystack++;
 	}
 
 	return ('\0');
