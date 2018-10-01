@@ -45,7 +45,7 @@ void print_buffer(char *b, int size)
 				printf(".");
 		}
 
-		if (byte >= size)
+		if ((index + byte) >= size)
 			continue;
 
 		printf("\n");
