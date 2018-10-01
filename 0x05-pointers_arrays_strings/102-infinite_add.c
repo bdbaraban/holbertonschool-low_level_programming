@@ -6,18 +6,68 @@
 #include "holberton.h"
 
 /**
+ * add_strings - Adds the numbers stored in two strings.
+ * @big: The string containing the larger of the two numbers.
+ * @small: The string containing the smaller of the two numbers.
+ * @r: The string to store the added numbers.
+ * @big_len: The length of big.
+ * @small_len: The length of small.
+ * @size_r: The number of elements in r.
+ *
+ * Return: If r can store the sum - a pointer to the result.
+ *         If r cannot store the sum - 0.
+ */
+char *add_strings(char *big, char *small, char *r,
+		  int big_len, int small_len, int size_r)
+{
+	int r_len = big_len;
+	int index, num, tens = 0;
+
+	while (small_len > 0)
+	{
+		num = big[big_len - 1] - '0' + small[small_len-- - 1] - '0';
+		num += tens;
+		r[big_len-- - 1] = (num % 10) + '0';
+		tens = num / 10;
+	}
+
+	while (big_len > 0)
+	{
+		num = (big[big_len - 1] - '0') + tens;
+		r[big_len-- - 1] = (num % 10) + '0';
+		tens = num / 10;
+	}
+
+	if (tens && (r_len + 1 < size_r))
+	{
+		for (index = r_len; index >= 0; index--)
+			r[index] = r[index - 1];
+		r[0] = (tens % 10) + '0';
+		r[r_len + 1] = '\0';
+	}
+
+	else if (tens && (r_len + 1 >= size_r))
+		return (0);
+
+	else
+		r[r_len] = '\0';
+
+	return (r);
+}
+
+/**
  * infinite_add - Adds two numbers.
  * @n1: The first number to be added.
  * @n2: The second number to be added.
  * @r: The buffer used to store the result.
  * @size_r: The buffer size.
  *
- * Return: A pointer to the result.
+ * Return: If r can store the sum - a pointer to the result.
+ *         If r cannot store the sum - 0.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int index, num, carry = 0;
-	int n1_len = 0, n2_len = 0, r_len = 0;
+	int index, n1_len = 0, n2_len = 0;
 
 	for (index = 0; n1[index]; index++)
 		n1_len++;
@@ -29,75 +79,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 
 	if (n1_len >= n2_len)
-	{
-		r_len = n1_len;
-
-		while (n2_len > 0)
-		{
-			num = (n1[n1_len - 1] - '0') + (n2[n2_len - 1] - '0') + carry;
-			r[n1_len - 1] = (num % 10) + '0';
-			carry = num / 10;
-			n1_len--;
-			n2_len--;
-		}
-
-		while (n1_len > 0)
-		{
-			num = (n1[n1_len - 1] - '0') + carry;
-			r[n1_len - 1] = (num % 10) + '0';
-			carry = num / 10;
-			n1_len--;
-		}
-
-		r[r_len] = '\0';
-
-		if (carry && (r_len + 1 < size_r))
-		{
-			for (index = r_len; index >= 0; index--)
-				r[index] = r[index - 1];
-			r[0] = (carry % 10) + '0';
-			r[r_len + 1] = '\0';
-		}
-
-		else if (carry && (r_len + 1 >= size_r))
-				return (0);
-	}
+		return (add_strings(n1, n2, r, n1_len, n2_len, size_r));
 
 	else
-	{
-		r_len = n2_len;
-
-		while (n1_len > 0)
-		{
-			num = (n1[n1_len - 1] - '0') + (n2[n2_len - 1] - '0') + carry;
-			r[n2_len - 1] = (num % 10) + '0';
-			n1_len--;
-			n2_len--;
-		}
-
-		while (n2_len > 0)
-		{
-			num = (n2[n2_len - 1] - '0') + carry;
-			r[n2_len - 1] = (num % 10) + '0';
-			carry = 0;
-			n2_len--;
-		}
-
-		r[r_len] = '\0';
-
-		if (carry && (r_len + 1 < size_r))
-		{
-			for (index = n2_len; index >= 0; index--)
-				r[index] = r[index - 1];
-			r[0] = (carry % 10) + '0';
-			r[r_len + 1] = '\0';
-		}
-
-		else if (carry && (r_len + 1 >= size_r))
-				return (0);		
-
-		r[r_len + 1] = '\0';
-	}
-
-	return (r);
+		return (add_strings(n2, n1, r, n2_len, n1_len, size_r));
 }
