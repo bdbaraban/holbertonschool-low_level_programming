@@ -21,7 +21,7 @@ void print_buffer(char *b, int size)
 
 		for (index = 0; index < 10; index += 2)
 		{
-			if ((index + byte) > size)
+			if ((index + byte) >= size)
 				printf("     ");
 
 			else
@@ -45,7 +45,7 @@ void print_buffer(char *b, int size)
 				printf(".");
 		}
 
-		if ((index + byte) >= size)
+		if (byte >= size)
 			continue;
 
 		printf("\n");
