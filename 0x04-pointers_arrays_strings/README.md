@@ -26,3 +26,5 @@ In this project, I learned about using pointers, arrays, and strings in C.
   * The number in the string can be preceded by an infinite number of characters.
   * Takes into account all `+` and `-` signs before the number.
   * If there are no numbers in the string, the function returns `0`.
+  
+* `101-keygen.c`: C program that generates random valid passwords for the program [101-crackme](https://github.com/holbertonschool/0x04.c).
