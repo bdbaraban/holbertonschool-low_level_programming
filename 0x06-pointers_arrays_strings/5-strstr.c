@@ -17,13 +17,10 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int index, needle_len = 0;
+	int index;
 
 	if (*needle == 0)
 		return (haystack);
-
-	for (index = 0; needle[index]; index++)
-		needle_len++;
 
 	while (*haystack)
 	{
@@ -31,13 +28,12 @@ char *_strstr(char *haystack, char *needle)
 
 		if (haystack[index] == needle[index])
 		{
-			while (haystack[index] == needle[index])
-			{
-				if (index == needle_len - 1)
+			do {
+				if (!(needle[index + 1])
 					return (haystack);
 
 				index++;
-			}
+			} while (haystack[index] == needle[index]);
 		}
 
 		haystack++;
