@@ -12,8 +12,8 @@
  * @argc: The number of arguments passed to the program.
  * @argv: An array of pointers to the arguments.
  *
- * Return: If the numbers contain only digits - 0.
- *         If one of the numbers contains non-digits - 1.
+ * Return: If one of the numbers contains symbols that are non-digits - 1.
+ *         Otherwise - 0.
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	for (num = 1; num < argc; num++)
 	{
-		if (atoi(argv[num]) != 0)
+		if (atoi(argv[num]) > 0)
 			sum += atoi(argv[num]);
 
 		else
