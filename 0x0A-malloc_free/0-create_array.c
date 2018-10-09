@@ -18,13 +18,15 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int index;
-	char *array = malloc(size);
+	char *array;
+
+	if (size == 0)
+		return (NULL);
+
+	array = malloc(size);
 
 	for (index = 0; index < size; index++)
 		array[index] = c;
-
-	if (size == 0 || array == NULL)
-		return (NULL);
 
 	return (array);
 }
