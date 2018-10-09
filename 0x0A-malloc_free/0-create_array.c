@@ -20,10 +20,13 @@ char *create_array(unsigned int size, char c)
 	unsigned int index;
 	char *array;
 
-	if (size <= 0)
+	if (size == 0)
 		return (NULL);
 
 	array = malloc(size);
+
+	if (array == NULL)
+		return (NULL);
 
 	for (index = 0; index < size; index++)
 		array[index] = c;
