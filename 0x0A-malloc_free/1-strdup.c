@@ -16,21 +16,21 @@
  */
 char *_strdup(char *str)
 {
-	int index = 0, str_len = 0;
+	int index, len = 0;
 	char *duplicate;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[index++])
-		str_len++;
+	for (index = 0; str[index]; index++)
+		len++;
 
-	duplicate = malloc(str_len);
+	duplicate = malloc(len);
 
 	if (duplicate == NULL)
 		return (NULL);
 
-	for (index = 0; index < str_len; index++)
+	for (index = 0; str[index]; index++)
 		duplicate[index] = str[index];
 
 	return (duplicate);
