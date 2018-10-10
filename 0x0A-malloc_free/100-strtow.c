@@ -57,12 +57,12 @@ char **strtow(char *str)
 	char **strings;
 	int index = 0, words, w, letters, l;
 
-	words = count_words(str);
-
-	if (words == 0)
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	strings = malloc(sizeof(char *) * words + 1);
+	words = count_words(str);
+
+	strings = malloc(sizeof(char *) * (words + 1));
 
 	if (strings == NULL)
 		return (NULL);
