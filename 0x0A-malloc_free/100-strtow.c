@@ -57,10 +57,10 @@ char **strtow(char *str)
 	char **strings;
 	int index = 0, words, w, letters, l;
 
-	if (str == NULL)
-		return (NULL);
-
 	words = count_words(str);
+
+	if (words == 0)
+		return (NULL);
 
 	strings = malloc(sizeof(char *) * words + 1);
 
