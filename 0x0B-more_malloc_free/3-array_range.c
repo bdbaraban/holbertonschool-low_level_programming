@@ -22,12 +22,12 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	array = malloc(sizeof(int) * max);
+	array = malloc(sizeof(int) * (max + 1));
 
 	if (array == NULL)
 		return (NULL);
 
-	for (index = 0; index < max; index++)
+	for (index = 0; index <= max; index++)
 		array[index] = min++;
 
 	return (array);
