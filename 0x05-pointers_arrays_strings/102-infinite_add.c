@@ -10,7 +10,7 @@
  * @n1: The string containing the first number to be added.
  * @n2: The string containing the second number to be added.
  * @r: The buffer to store the result.
- * @size_r: The current index of the buffer.
+ * @r_index: The current index of the buffer.
  *
  * Return: If r can store the sum - a pointer to the result.
  *         If r cannot store the sum - 0.
