@@ -5,6 +5,7 @@
 
 #include "holberton.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _calloc - Allocates memory for an array of a certain number of elements
@@ -17,8 +18,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *mem;
-	unsigned int index;
+	void *mem;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -28,8 +28,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (mem == NULL)
 		return (NULL);
 
-	for (index = 0; index < nmemb; index++)
-		mem[index] = '0';
+	mem = memset(mem, 0, nmemb);
 
 	return (mem);
 }
