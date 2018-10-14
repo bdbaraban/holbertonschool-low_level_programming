@@ -2,8 +2,22 @@ In this project, I continued to learn about using nested loops and writing funct
 
 ---
 
-* `holberton.h`: Header file containing prototypes for all functions written in the project.
 * `_putchar.c`: C function that writes a character to `stdout`.
+* `holberton.h`: Header file containing prototypes for all functions written in the project.
+
+| File                     | Prototype                        |
+| ------------------------ | -------------------------------- |
+| `0-isupper.c`            | `int _isupper(int c);`           |
+| `1-isdigit.c`            | `int _isdigit(int c);`           |
+| `2-mul.c`                | `int mul(int a, int b);`         |                   
+| `3-print_numbers.c`      | `void print_numbers(void);`      |
+| `4-print_most_numbers.c` | `void print_most_numbers(void);` |
+| `5-more_numbers.c`       | `void more_numbers(void);`       |
+| `6-print_line.c`         | `void print_line(int n);`        |
+| `7-print_diagonal.c`     | `void print_diagonal(int n);`    |
+| `8-print_square.c`       | `void print_square(int size);`   |
+| `10-print_triangle.c`    | `void print_triangle(int size);` |
+| `101-print_number.c`     | `void print_number(int n);`      |
 
 ---
 
@@ -30,4 +44,3 @@ In this project, I continued to learn about using nested loops and writing funct
 
 * `100-prime_factor.c`: C program that prints the largest prime factor of the number `612852475143`, followed by a new line.
 * `101-print_number.c`: C function that prints an integer without using `long`, arrays, pointers, or hard-coded special values.
-
