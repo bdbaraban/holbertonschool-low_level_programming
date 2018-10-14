@@ -3,6 +3,7 @@ In this project, I learned about using `exit`, `calloc`, and `realloc` in C.
 ---
 
 * `holberton.h`: Header file containing prototypes for all functions written in the project.
+
 | File                 | Prototype                                                                  |
 | -------------------- |:--------------------------------------------------------------------------:|
 | `0-malloc_checked.c` | `void *malloc_checked(unsigned int b);`                                    |
