@@ -2,8 +2,20 @@ In this project, I learned about pointers to pointers and multidimensional array
 
 ---
 
-* `holberton.h`: Header file containing prototypes for all functions written in the project.
 * `_putchar.c`: C function that writes a character to `stdout`.
+* `holberton.h`: Header file containing prototypes for all functions written in the project.
+
+| File         | Prototype                                               |
+| ------------ | ------------------------------------------------------- |
+| `0-memset.c` | `char *_memset(char *s, char b, unsigned int n);`       |
+| `1-memcpy.c` | `char *_memcpy(char *dest, char *src, unsigned int n);` |
+| `2-strchr.c` | `char *_strchr(char *s, char c);`                       |
+| `3-strspn.c` | `unsigned int _strspn(char *s, char *accept);`          |
+| `4-strpbrk.c` | `char *_strpbrk(char *s, char *accept);`               |
+| `5-strstr.c` | `char *_strstr(char *haystack, char *needle);`          |
+| `7-print_chessboard.c` | `void print_chessboard(char (*a)[8]);`        |
+| `8-print_diagsums.c` | `void print_diagsums(int *a, int size);`        |
+| `9-set_string.c` | `void set_string(char **s, char *to);`              |
 
 ---
 
@@ -11,14 +23,12 @@ In this project, I learned about pointers to pointers and multidimensional array
   * Returns a pointer to the filled memory area `s`.
 
 * `1-memcpy.c`: C function that copies `n` bytes from memory area `src` to memory area `dest`.
-  * Returns a pointer to to memory area `dest`.
+  * Returns a pointer to the memory area `dest`.
 
 * `2-strchr.c`: C function that returns a pointer to the first occurence of the character `c` in the string `s`.
   * If the character is not found, the function returns `NULL`.
 
 * `3-strspn.c`: C function that returns the number of bytes in the intitial segment of memory area `s` which consist only of bytes from a substring `accept`.
-  * Returns the number of bytes in the initial segment of `s` which consist only of bytes from `accept`.
-
 * `4-strpbrk.c`: C function that locates the first occurence in a string `s` of any of the bytes in a string `accept`.
   * Returns a pointer to the byte in `s` that matches one of the bytes in `accept`.
   * If no matching byte is found, the function returns `NULL`.
