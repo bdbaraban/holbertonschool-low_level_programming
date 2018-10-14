@@ -5,7 +5,7 @@ In this project, I learned about using `exit`, `calloc`, and `realloc` in C.
 * `holberton.h`: Header file containing prototypes for all functions written in the project.
 
 | File                 | Prototype                                                                  |
-| -------------------- |:--------------------------------------------------------------------------:|
+| -------------------- | -------------------------------------------------------------------------- |
 | `0-malloc_checked.c` | `void *malloc_checked(unsigned int b);`                                    |
 | `1-string_nconcat.c` | `char *string_nconcat(char *s1, char *s2, unsigned int n);`                |
 | `2-calloc.c`         | `char *string_nconcat(char *s1, char *s2, unsigned int n);`                |
