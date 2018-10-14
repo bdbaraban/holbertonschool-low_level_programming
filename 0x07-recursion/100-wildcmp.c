@@ -5,6 +5,11 @@
 
 #include "holberton.h"
 
+int strlen_no_wilds(char *str);
+char *iterate_wild(char *wildstr);
+char *postfix_match(char *str, char *postfix);
+int wildcmp(char *s1, char *s2);
+
 /**
  * strlen_no_wilds - Returns the length of a string,
  *                   ignoring wildcard characters.
