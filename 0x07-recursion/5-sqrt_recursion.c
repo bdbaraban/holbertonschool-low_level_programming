@@ -5,6 +5,9 @@
 
 #include "holberton.h"
 
+int find_sqrt(int num, int root);
+int _sqrt_recursion(int n);
+
 /**
  * find_sqrt - Finds the natural square root of an inputted number.
  * @num: The number to find the square root of.
