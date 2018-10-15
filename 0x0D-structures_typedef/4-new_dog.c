@@ -4,7 +4,7 @@
  */
 
 #include "dog.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * new_dog - Creates a new dog.
@@ -18,13 +18,31 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t doggo;
 	dog_t *me_doggo = &doggo;
+	int index;
 
-	if (me_doggo == NULL)
+	for (index = 0; name[index]; index++)
+		;
+
+	doggo.name = malloc(sizeof(char) * index);
+	if (doggo.name == NULL)
 		return (NULL);
 
-	doggo.name = name;
+	for (index = 0; name[index]; index++)
+		doggo.name[index] = name[index];
+	doggo.name[index] = '\0';
+
 	doggo.age = age;
-	doggo.owner = owner;
+
+	for (index = 0; owner[index]; index++)
+		;
+
+	doggo.owner = malloc(sizeof(char) * index);
+	if (doggo.owner == NULL)
+		return (NULL);
+
+	for (index = 0; owner[index]; index++)
+		doggo.owner[index] = owner[index];
+	doggo.owner[index] = '\0';
 
 	return (me_doggo);
 }
