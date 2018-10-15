@@ -17,7 +17,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t doggo;
-	dog_t *me_doggo = doggo;
+	dog_t *me_doggo = &doggo;
 
 	if (me_doggo == NULL)
 		return (NULL);
