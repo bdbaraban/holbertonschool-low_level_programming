@@ -5,6 +5,7 @@
 
 #include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_dog - Prints a struct dog.
