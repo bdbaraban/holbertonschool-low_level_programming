@@ -5,6 +5,10 @@
 
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+
+int find_len(char *str);
+dog_t *new_dog(char *name, float age, char *owner);
 
 /**
  * find_len - Finds the length of a string.
@@ -33,6 +37,7 @@ int find_len(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doggo;
+	char *name_cpy, *owner_cpy;
 	int index, name_len, owner_len;
 
 	doggo = malloc(sizeof(dog_t));
@@ -42,23 +47,31 @@ dog_t *new_dog(char *name, float age, char *owner)
 	name_len = find_len(name);
 	owner_len = find_len(owner);
 
-	doggo->name = malloc(sizeof(char) * (name_len + 1));
-	if (doggo->name == NULL)
+	name_cpy = malloc(sizeof(char) * (name_len + 1));
+	if (name_cpy == NULL)
+	{
+		free(doggo);
 		return (NULL);
-	
-	doggo->owner = malloc(sizeof(char) * (owner_len + 1));
-	if (doggo->owner == NULL)
+	}
+
+	for (index = 0; index < name_len; index++)
+		name_cpy[index] = name[index];
+	name_cpy[index] = '\0';
+
+	owner_cpy = malloc(sizeof(char) * (owner_len + 1));
+	if (owner_cpy == NULL)
+	{
+		free(name_cpy);
+		free(doggo);
 		return (NULL);
+	}
 
-	for (index = 0; name[index]; index++)
-		doggo->name[index] = name[index];
-	doggo->name[index] = '\0';
-
+	doggo->name = name;
 	doggo->age = age;
+	doggo->owner = owner;
 
-	for (index = 0; owner[index]; index++)
-		doggo->owner[index] = owner[index];
-	doggo->owner[index] = '\0';
+	free(name_cpy);
+	free(owner_cpy);
 
 	return (doggo);
 }
