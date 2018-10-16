@@ -5,7 +5,6 @@
 
 #include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int find_len(char *str);
 dog_t *new_dog(char *name, float age, char *owner);
@@ -65,6 +64,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(doggo);
 		return (NULL);
 	}
+
+	for (index = 0; index < owner_len; index++)
+		owner_cpy[index] = owner[index];
+	owner_cpy[index] = '\0';
 
 	doggo->name = name;
 	doggo->age = age;
