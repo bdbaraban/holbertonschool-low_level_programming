@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	for (index = 0; index < bytes; index++)
 	{
-		printf("%02x", ((char *)&address)[index]);
+		printf("%.2x", ((unsigned char *)&address)[index]);
 
 		if (index == bytes - 1)
 			continue;
