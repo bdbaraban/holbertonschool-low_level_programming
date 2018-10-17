@@ -6,7 +6,7 @@
 #include "holberton.h"
 
 int strlen_no_wilds(char *str);
-char *iterate_wild(char *wildstr);
+void iterate_wild(char **wildstr);
 char *postfix_match(char *str, char *postfix);
 int wildcmp(char *s1, char *s2);
 
@@ -40,15 +40,13 @@ int strlen_no_wilds(char *str)
  *
  * Return: A pointer to the iterated string.
  */
-char *iterate_wild(char *wildstr)
+void iterate_wild(char **wildstr)
 {
-	if (*wildstr == '*')
+	if (**wildstr == '*')
 	{
-		wildstr++;
-		return (iterate_wild(wildstr));
+		(*wildstr)++;
+		iterate_wild(wildstr);
 	}
-
-	return (wildstr);
 }
 
 /**
@@ -67,7 +65,7 @@ char *postfix_match(char *str, char *postfix)
 	int postfix_len = strlen_no_wilds(postfix) - 1;
 
 	if (*postfix == '*')
-		postfix = iterate_wild(postfix);
+		iterate_wild(&postfix);
 
 	if (*(str + str_len - postfix_len) == *postfix && *postfix != '\0')
 	{
@@ -89,7 +87,10 @@ char *postfix_match(char *str, char *postfix)
 int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*')
-		s2 = postfix_match(s1, iterate_wild(s2));
+	{
+		iterate_wild(&s2);
+		s2 = postfix_match(s1, s2);
+	}
 
 	if (*s2 == '\0')
 		return (1);
