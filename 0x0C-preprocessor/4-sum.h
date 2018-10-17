@@ -1,5 +1,5 @@
-#ifndef _4_SUM_H_
-#define _4_SUM_H_
+#ifndef 4_SUM_H
+#define 4_SUM_H
 
 /*
  * File: 4-sum.h
