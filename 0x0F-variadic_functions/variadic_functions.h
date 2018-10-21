@@ -16,7 +16,7 @@
  * @print: A function pointer to a function that prints
  *         a data type corresponding to symbol.
  */
-struct printer
+typedef struct printer
 {
 	char *symbol;
 	void (*print)(va_list arg);
