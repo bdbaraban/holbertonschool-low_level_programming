@@ -12,11 +12,12 @@ In this project, I learned about using function pointers in C.
 
 * `3-calc.h`: Header file containing definitions and prototypes for all types and function written for the program `3-main.c`.
 
-| Type/File                | Definition/Prototypes                                        |
-| ------------------------ | ------------------------------------------------------------ |
-| `typedef struct op op_t` | <ul><li>`char *op`</li><li>`int (*f)(int a, int b)`</li><ul> |
-| `3-op_functions.c`       | <ul><li>`int op_add(int a, int b);`</li><li>`int op_sub(int a, int b);`</li><li>`int op_mul(int a, int b);`</li><li>`int op_div(int a, int b);`</li><li>`int op_mod(int a, int b);`</li></ul>                                            |
-| `3-get_op_func.c`        | `int (*get_op_func(char *s))(int, int);`                     |
+| Type/File          | Definition/Prototypes                                        |
+| ------------------ | ------------------------------------------------------------ |
+| `struct op`        | <ul><li>`char *op`</li><li>`int (*f)(int a, int b)`</li><ul> |
+| `typedef op_t`     | `struct op`                                                  |
+| `3-op_functions.c` | <ul><li>`int op_add(int a, int b);`</li><li>`int op_sub(int a, int b);`</li><li>`int op_mul(int a, int b);`</li><li>`int op_div(int a, int b);`</li><li>`int op_mod(int a, int b);`</li></ul>                                            |
+| `3-get_op_func.c`  | `int (*get_op_func(char *s))(int, int);`                     |
 
 ---
 
@@ -50,3 +51,8 @@ In this project, I learned about using function pointers in C.
   * If the number of arguments is incorrect, the program prints `Error` followed by a new line and exits with a status value of `98`.
   * If the `operator` is none of the above, the program prints `Error` followed by a new line and exits with a status value of `99`.
   * If the user tries to divide (`/` or `%`) by `0`, the program prints `Error` followed by a new line and exits with a status value of `100`.
+
+* `100-main_opcodes.c`: C program that prints the opcodes of its own main function, followed by a new line.
+  * Usage: `./main number_of_bytes`
+  * Opcodes are printed two-decimal long in hexadecimal, lowercase.
+  * If the number of arguments is incorrect, the program prints `Error` followed by a new line and exits with a status value of `2`.
