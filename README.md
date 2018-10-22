@@ -1,4 +1,4 @@
-This repository contains the following fifteen projects completed for the low-level programming and algorithm track at [Holberton School](https://www.holbertonschool.com/):
+This repository contains the following sixteen projects completed for the low-level programming and algorithm track at [Holberton School](https://www.holbertonschool.com/):
 
 * 0x00. C - Hello, World
 * 0x01. C - Variables, if, else, while
@@ -15,6 +15,7 @@ This repository contains the following fifteen projects completed for the low-le
 * 0x0C. C - Preprocessor
 * 0x0D. C - Structures, typedef
 * 0x0E. C - Function pointers
+* 0x0F. C - Variadic functions
 
 <p align="center">
   <img src="http://www.holbertonschool.com/holberton-logo.png">
