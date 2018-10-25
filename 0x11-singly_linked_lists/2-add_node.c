@@ -27,17 +27,17 @@ list_t *add_node(list_t **head, const char *str)
 
 	dup = strdup(str);
 	if (dup == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 
 	for (len = 0; str[len];)
 		len++;
 
 	new->str = dup;
 	new->len = len;
-	if (*head == NULL)
-		new->next = NULL;
-	else
-		new->next = *head;
+	new->next = *head;
 
 	*head = new;
 
