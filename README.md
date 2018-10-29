@@ -18,6 +18,7 @@ This repository contains programs written for the low-level programming and algo
 * 0x0E. C - Function pointers
 * 0x0F. C - Variadic functions
 * 0x11. C - Singly linked lists
+* 0x12. C - More singly linked lists
 
 ## Author
 * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> - Holberton School student
