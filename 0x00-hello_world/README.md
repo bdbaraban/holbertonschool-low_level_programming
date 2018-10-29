@@ -17,7 +17,7 @@ In this project, I learned about compilation using `gcc`, entry points using `ma
   * `3-name`: Bash Script that compiles a C file saved in the variable `$CFILE` and creates an executable `cisfun`.
 
 * **Hello, puts**
- * `4-puts.c`: C program that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line, using the function `puts`.
+  * `4-puts.c`: C program that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line, using the function `puts`.
 
 * **Hello, printf**
   * `5-printf.c`: C program that prints exactly `with proper grammer, but the outcome is a piece of art,`, followed by a new line, using the function `printf`.
