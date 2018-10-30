@@ -16,7 +16,7 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *ahead, *behind;
 
-	if (*head == NULL)
+	if (head == NULL || (*head)->next == NULL)
 		return (*head);
 
 	ahead = (*head)->next;
