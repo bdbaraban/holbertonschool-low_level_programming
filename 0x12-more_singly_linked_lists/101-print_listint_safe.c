@@ -23,12 +23,16 @@ size_t print_listint_safe(const listint_t *head)
 	if (head == NULL)
 		exit(98);
 
+	nodes++;
+	printf("[%p] %d\n", (void *)head, head->n);
+	head = head->next;
+
 	while (head)
 	{
-		nodes++;
 
-		if (head <= address)
+		if (head < address)
 		{
+			nodes++;
 			printf("[%p] %d\n", (void *)head, head->n);
 			address = head;
 			head = head->next;
