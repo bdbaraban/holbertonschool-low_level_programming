@@ -20,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *address = head;
 	size_t nodes = 0;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 		return (nodes);
 
 	nodes++;
