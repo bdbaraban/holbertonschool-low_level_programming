@@ -25,13 +25,14 @@ size_t free_listint_safe(listint_t **h)
 
 	while (*h)
 	{
+		nodes++;
+
 		if (*h > address)
 		{
 			*h = NULL;
 			continue;
 		}
 
-		nodes++;
 		address = *h;
 		tmp = (*h)->next;
 		free(*h);
