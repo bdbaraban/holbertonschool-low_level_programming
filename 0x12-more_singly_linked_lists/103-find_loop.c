@@ -23,9 +23,12 @@ listint_t *find_listint_loop(listint_t *head)
 
 	head = head->next;
 
-	while (address && head)
+	if (head == address)
+		return (head);
+
+	while (head)
 	{
-		if (head >= address)
+		if (head > address)
 			return (head);
 
 		address = head;
