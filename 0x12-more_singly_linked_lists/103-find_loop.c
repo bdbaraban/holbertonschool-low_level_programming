@@ -18,7 +18,7 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *address = head;
 
-	if (head == NULL)
+	if (head == NULL || head->next == NULL)
 		return (NULL);
 
 	head = head->next;
