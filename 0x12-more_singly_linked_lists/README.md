@@ -81,7 +81,6 @@ In this project, I continued to practice building and using singly linked lists 
 * **Print (safe version)**
   * `101-print_listint_safe.c`: C function that prints a `listint_t` linked list safely (ie. can free lists containing loops).
     * Returns the number of nodes in the `listint_t` list.
-    * Upon failure, the function exits with a status value of `98`.
 
 * **Free (safe version)**
   * `102-free_listint_safe.c`: C function that frees a `listint_t` linked list safely (ie. can free lists containing loops).

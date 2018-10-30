@@ -12,8 +12,6 @@
  *
  * Return: The number of nodes in the list.
  *
- * Description: Upon failure, the function exits
- *              with a status value of 98.
  */
 size_t print_listint_safe(const listint_t *head)
 {
