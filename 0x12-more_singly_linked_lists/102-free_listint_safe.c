@@ -17,25 +17,28 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *tmp, *copy = *h, *address = *h;
+	listint_t *tmp, *address = *h;
 	size_t nodes = 0;
 
-	while (copy)
+	if (h == NULL)
+		return (nodes);
+
+	while (*h)
 	{
-		if (copy <= address)
+		if (*h <= address)
 		{
 			nodes++;
-			address = copy;
-			tmp = copy->next;
-			free(copy);
-			copy = tmp;
+			address = *h;
+			tmp = (*h)->next;
+			free(*h);
+			*h = tmp;
 		}
 
 		else
-			copy = NULL;
+			*h = NULL;
 	}
 
-	*h = NULL;
+	h = NULL;
 
 	return (nodes);
 }
