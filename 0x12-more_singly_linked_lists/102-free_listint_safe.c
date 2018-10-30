@@ -20,22 +20,22 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *tmp, *address = *h;
 	size_t nodes = 0;
 
-	if (h == NULL || *h == NULL)
+	if (h == NULL)
 		return (nodes);
 
 	while (*h)
 	{
-		if (*h <= address)
+		if (*h > address)
 		{
-			nodes++;
-			address = *h;
-			tmp = (*h)->next;
-			free(*h);
-			*h = tmp;
+			*h = NULL;
+			continue;
 		}
 
-		else
-			*h = NULL;
+		nodes++;
+		address = *h;
+		tmp = (*h)->next;
+		free(*h);
+		*h = tmp;
 	}
 
 	h = NULL;
