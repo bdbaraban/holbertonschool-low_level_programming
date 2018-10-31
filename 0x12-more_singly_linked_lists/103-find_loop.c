@@ -16,20 +16,31 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *address = head;
+	listint_t *loop, *address;
 
-	if (head == NULL)
+	if (head == NULL || head->next == NULL)
 		return (NULL);
 
-	head = head->next;
+	address = (head->next)->next;
+	loop = head->next;
 
-	while (head)
+	while (address)
 	{
-		if (head >= address)
-			return (head);
+		if (loop == address)
+		{
+			loop = head;
 
-		address = head;
-		head = head->next;
+			while (loop != address)
+			{
+				loop = loop->next;
+				address = address->next;
+			}
+
+			return (loop);
+		}
+
+		address = (address->next)->next;
+		loop = loop->next;
 	}
 
 	return (NULL);
