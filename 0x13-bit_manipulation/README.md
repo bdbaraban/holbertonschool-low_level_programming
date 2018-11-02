@@ -7,14 +7,15 @@ In this project, I learned how to manipulate bits and use the bitwise operators 
 * `_putchar.c`: C function that writes a character to `stdout`.
 * `holberton.h`: Header file containing prototypes for all functions written in the project.
 
-| File                 | Prototype                                                           |
-| -------------------- | ------------------------------------------------------------------- |
-| `0-binary_to_uint.c` | `unsigned int binary_to_uint(const char *b);`                       |
-| `1-print_binary.c`   | `void print_binary(unsigned long int n);`                           |
-| `2-get_bit.c`        | `int get_bit(unsigned long int n, unsigned int index);`             |
-| `3-set_bit.c`        | `int set_bit(unsigned long int *n, unsigned int index);`            |
-| `4-clear_bit.c`      | `int clear_bit(unsigned long int *n, unsigned int index);`          |
-| `5-flip_bits.c`      | `unsigned int flip_bits(unsigned long int n, unsigned long int m);` |
+| File                   | Prototype                                                           |
+| ---------------------- | ------------------------------------------------------------------- |
+| `0-binary_to_uint.c`   | `unsigned int binary_to_uint(const char *b);`                       |
+| `1-print_binary.c`     | `void print_binary(unsigned long int n);`                           |
+| `2-get_bit.c`          | `int get_bit(unsigned long int n, unsigned int index);`             |
+| `3-set_bit.c`          | `int set_bit(unsigned long int *n, unsigned int index);`            |
+| `4-clear_bit.c`        | `int clear_bit(unsigned long int *n, unsigned int index);`          |
+| `5-flip_bits.c`        | `unsigned int flip_bits(unsigned long int n, unsigned long int m);` |
+| `100-get_endianness.c` | `int get_endianness(void);`                                         |
 
 ## Tasks
 * **0**
@@ -44,3 +45,11 @@ In this project, I learned how to manipulate bits and use the bitwise operators 
 
 * **101**
   * `5-flip_bits.c`: C function that returns the number of bits needed to be flipped to get from one number to another.
+
+* **Endianness**
+  * `100-get_endianness.c`: C function that checks the endianness.
+  * If big-endian - returns `0`.
+  * If little-endian - returns `1`.
+
+* **Crackme3**
+  * `101-password`: File containing the password for the [crackme3](https://github.com/holbertonschool/0x13.c) executable.
