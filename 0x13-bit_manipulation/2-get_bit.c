@@ -4,7 +4,6 @@
  */
 
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * get_bit - Gets the value of a bit at a given index.

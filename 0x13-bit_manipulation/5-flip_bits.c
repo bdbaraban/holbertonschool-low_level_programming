@@ -4,7 +4,6 @@
  */
 
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * flip_bits - Counts the number of bits needed to be
