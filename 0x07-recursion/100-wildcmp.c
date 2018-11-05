@@ -37,8 +37,6 @@ int strlen_no_wilds(char *str)
  * iterate_wild - Iterates through a string located at a wildcard
  *                until it points to a non-wildcard character.
  * @wildstr: The string to be iterated through.
- *
- * Return: A pointer to the iterated string.
  */
 void iterate_wild(char **wildstr)
 {
