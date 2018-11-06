@@ -19,7 +19,8 @@ This repository contains programs written for the low-level programming and algo
 * 0x0F. C - Variadic functions
 * 0x11. C - Singly linked lists
 * 0x12. C - More singly linked lists
-* 0x13. 0x13. C - Bit manipulation
+* 0x13. C - Bit manipulation
+* 0x14. C - File I/O
 
 ## Author
 * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> - Holberton School student
