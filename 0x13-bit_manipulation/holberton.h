@@ -3,8 +3,9 @@
 
 /*
  * File: holberton.h
- * Auth: Header file containing prototypes for all functions
- *       used in the 0x13-bit_manipulation directory.
+ * AUth: Brennan D Baraban
+ * Desc: Header file containing prototypes for all functions
+ *       written in the 0x13-bit_manipulation directory.
  */
 
 int _putchar(char c);
