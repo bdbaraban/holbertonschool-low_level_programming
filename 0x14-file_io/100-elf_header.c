@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void check_elf(char *file, Elf32_Ehdr header);
+void check_elf(Elf32_Ehdr header);
 void print_magic(Elf32_Ehdr header);
 void print_class(Elf32_Ehdr header);
 void print_data(Elf32_Ehdr header);
@@ -23,12 +23,11 @@ void print_entry(Elf32_Ehdr header);
 
 /**
  * check_elf - Checks if a file is an ELF file.
- * @file: A pointer to the file name to check.
- * @header: An Elf32_Ehdr header obtained from header.
+ * @header: An Elf32_Ehdr header obtained from a file.
  *
- * Description: If file is not an ELF file - exit code 98.
+ * Description: If the file is not an ELF file - exit code 98.
  */
-void check_elf(char *file, Elf32_Ehdr header)
+void check_elf(Elf32_Ehdr header)
 {
 	int index;
 
@@ -247,7 +246,7 @@ void print_entry(Elf32_Ehdr header)
  * Description: If the function fails or the file
  *              is not an ELF file - exit code 98.
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf32_Ehdr header;
 	int o, r;
@@ -268,7 +267,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	check_elf(argv[1], header);
+	check_elf(header);
 
 	printf("ELF Header:\n");
 	print_magic(header);
