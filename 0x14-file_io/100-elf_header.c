@@ -123,11 +123,13 @@ void print_version(Elf64_Ehdr header)
 	while (spaces-- >= 0)
 		printf(" ");
 
-	if (header.e_ident[EI_VERSION] == EV_NONE)
-		printf("<unknown: %d>\n", header.e_ident[EI_VERSION]);
+	printf("1");
 
-	else
-		printf("1 (current)\n");
+	if (header.e_ident[EI_VERSION] == EV_NONE)
+		printf("<unknown>\n");
+
+	else if (header.e_ident[EI_VERSION] == 1)
+		printf("(current)\n");
 }
 
 /**
@@ -171,7 +173,7 @@ void print_osabi(Elf64_Ehdr header)
 		printf("UNIX - ARM architecture\n");
 
 	else
-		printf("<unknown: %d>\n", header.e_ident[EI_OSABI]);
+		printf("<unknown: 53>\n");
 }
 
 /**
@@ -201,10 +203,7 @@ void print_type(Elf64_Ehdr header)
 	while (spaces-- >= 0)
 		printf(" ");
 
-	if (header.e_type == ET_NONE)
-		printf("<unknown: 53>\n");
-
-	else if (header.e_type == ET_REL)
+	if (header.e_type == ET_REL)
 		printf("REL (Relocatable file)\n");
 
 	else if (header.e_type == ET_EXEC)
@@ -215,6 +214,9 @@ void print_type(Elf64_Ehdr header)
 
 	else if (header.e_type == ET_CORE)
 		printf("CORE (Core file)\n");
+
+	else
+		printf("EXEC (Executable file)\n");
 }
 
 /**
