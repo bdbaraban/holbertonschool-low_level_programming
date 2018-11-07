@@ -129,7 +129,7 @@ void print_version(Elf64_Ehdr header)
 		printf("<unknown>\n");
 
 	else if (header.e_ident[EI_VERSION] == 1)
-		printf("(current)\n");
+		printf(" (current)\n");
 }
 
 /**
