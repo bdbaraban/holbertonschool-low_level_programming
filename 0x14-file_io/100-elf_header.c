@@ -11,23 +11,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void check_elf(Elf32_Ehdr header);
-void print_magic(Elf32_Ehdr header);
-void print_class(Elf32_Ehdr header);
-void print_data(Elf32_Ehdr header);
-void print_version(Elf32_Ehdr header);
-void print_abi(Elf32_Ehdr header);
-void print_osabi(Elf32_Ehdr header);
-void print_type(Elf32_Ehdr header);
-void print_entry(Elf32_Ehdr header);
+void check_elf(Elf64_Ehdr header);
+void print_magic(Elf64_Ehdr header);
+void print_class(Elf64_Ehdr header);
+void print_data(Elf64_Ehdr header);
+void print_version(Elf64_Ehdr header);
+void print_abi(Elf64_Ehdr header);
+void print_osabi(Elf64_Ehdr header);
+void print_type(Elf64_Ehdr header);
+void print_entry(Elf64_Ehdr header);
 
 /**
  * check_elf - Checks if a file is an ELF file.
- * @header: An Elf32_Ehdr header obtained from a file.
+ * @header: An Elf64_Ehdr header obtained from a file.
  *
  * Description: If the file is not an ELF file - exit code 98.
  */
-void check_elf(Elf32_Ehdr header)
+void check_elf(Elf64_Ehdr header)
 {
 	int index;
 
@@ -46,11 +46,11 @@ void check_elf(Elf32_Ehdr header)
 
 /**
  * print_magic - Prints the magic numbers of an ELF header.
- * @header: An Elf32_Ehdr header struct.
+ * @header: An Elf64_Ehdr header struct.
  *
  * Description: Magic numbers are separated by spaces.
  */
-void print_magic(Elf32_Ehdr header)
+void print_magic(Elf64_Ehdr header)
 {
 	int index;
 
@@ -69,9 +69,9 @@ void print_magic(Elf32_Ehdr header)
 
 /**
  * print_class - Prints the class of an ELF header.
- * @header: An Elf32_Ehdr header struct.
+ * @header: An Elf64_Ehdr header struct.
  */
-void print_class(Elf32_Ehdr header)
+void print_class(Elf64_Ehdr header)
 {
 	int spaces = 28;
 
@@ -91,9 +91,9 @@ void print_class(Elf32_Ehdr header)
 
 /**
  * print_data - Prints the data of an ELF header.
- * @header: An ELF32_Ehdr header struct.
+ * @header: An ELF64_Ehdr header struct.
  */
-void print_data(Elf32_Ehdr header)
+void print_data(Elf64_Ehdr header)
 {
 	int spaces = 29;
 
@@ -113,9 +113,9 @@ void print_data(Elf32_Ehdr header)
 
 /**
  * print_version - Prints the version of an ELF header.
- * @header: An ELF32_Ehdr header struct.
+ * @header: An ELF64_Ehdr header struct.
  */
-void print_version(Elf32_Ehdr header)
+void print_version(Elf64_Ehdr header)
 {
 	int spaces = 26;
 
@@ -132,9 +132,9 @@ void print_version(Elf32_Ehdr header)
 
 /**
  * print_osabi - Prints the OS/ABI of an ELF header.
- * @header: An ELF32_Ehdr header struct.
+ * @header: An ELF64_Ehdr header struct.
  */
-void print_osabi(Elf32_Ehdr header)
+void print_osabi(Elf64_Ehdr header)
 {
 	int spaces = 27;
 
@@ -176,9 +176,9 @@ void print_osabi(Elf32_Ehdr header)
 
 /**
  * print_abi - Prints the ABI version of an ELF header.
- * @header: An ELF32_Ehdr header struct.
+ * @header: An ELF64_Ehdr header struct.
  */
-void print_abi(Elf32_Ehdr header)
+void print_abi(Elf64_Ehdr header)
 {
 	int spaces = 22;
 
@@ -191,9 +191,9 @@ void print_abi(Elf32_Ehdr header)
 
 /**
  * print_type - Prints the type of an ELF header.
- * @header: An Elf32_Ehdr header struct.
+ * @header: An Elf64_Ehdr header struct.
  */
-void print_type(Elf32_Ehdr header)
+void print_type(Elf64_Ehdr header)
 {
 	int spaces = 29;
 
@@ -219,18 +219,21 @@ void print_type(Elf32_Ehdr header)
 
 /**
  * print_entry - Prints the entry point of an ELF header.
- * @header: AN Elf32_Ehdr header struct.
+ * @header: AN Elf64_Ehdr header struct.
  */
-void print_entry(Elf32_Ehdr header)
+void print_entry(Elf64_Ehdr header)
 {
 	int spaces = 14;
-	unsigned long int address = header.e_entry;
 
 	printf("  Entry point address:");
 	while (spaces-- >= 0)
 		printf(" ");
 
-	printf("%#lx\n", address);
+	if (header.e_ident[EI_CLASS] == ELFCLASS64)
+		printf("%#lx\n", header.e_entry);
+
+	else
+		printf("%#x\n", (unsigned int)header.e_entry);
 }
 
 /**
@@ -246,7 +249,7 @@ void print_entry(Elf32_Ehdr header)
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	Elf32_Ehdr header;
+	Elf64_Ehdr header;
 	int o, r;
 
 	o = open(argv[1], O_RDONLY);
@@ -257,12 +260,18 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(98);
 	}
 
-	r = read(o, &header, sizeof(Elf32_Ehdr));
+	r = read(o, &header, sizeof(Elf64_Ehdr));
 	if (r == -1)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: `%s`: No such file\n", argv[1]);
 		exit(98);
+	}
+
+	if (header.e_ident[EI_CLASS] == ELFCLASS32)
+	{
+		lseek(o, 0, SEEK_SET);
+		read(o, &header, sizeof(Elf32_Ehdr));
 	}
 
 	check_elf(header);
