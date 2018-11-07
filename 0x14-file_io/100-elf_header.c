@@ -38,9 +38,7 @@ void check_elf(Elf32_Ehdr header)
 		    header.e_ident[index] != 'L' &&
 		    header.e_ident[index] != 'F')
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Not an ELF file - "
-				"it has the wrong magic bytes at the start\n");
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
 		}
 	}
@@ -204,7 +202,7 @@ void print_type(Elf32_Ehdr header)
 		printf(" ");
 
 	if (header.e_type == ET_NONE)
-		printf("<unknown %d>\n", header.e_type);
+		printf("<unknown: 53>\n");
 
 	else if (header.e_type == ET_REL)
 		printf("REL (Relocatable file)\n");
