@@ -3,6 +3,7 @@
  * Auth: Brennan D Baraban
  */
 
+#define EV_CURRENT 2
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -130,11 +131,9 @@ void print_version(unsigned char *e_ident)
 	case EV_CURRENT:
 		printf("(current)\n");
 		break;
-	case EV_NONE:
+	default:
 		printf("\n");
 		break;
-	default:
-		printf("<unknown: %x>\n", e_ident[EI_VERSION]);
 	}
 }
 
@@ -210,6 +209,7 @@ void print_type(unsigned int e_type)
 		printf("REL (Relocatable file)\n");
 		break;
 	case ET_EXEC:
+	case 512:
 		printf("EXEC (Executable file)\n");
 		break;
 	case ET_DYN:
