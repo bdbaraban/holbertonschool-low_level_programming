@@ -23,6 +23,7 @@ This repository contains programs written for the low-level programming and algo
  * 0x13. C - Bit manipulation
  * 0x14. C - File I/O
  * 0x16. C - Doubly linked lists
+ * 0x17. C - Dynamic libraries
 
 ## Author
  * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> - Holberton School student
