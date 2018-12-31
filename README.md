@@ -18,12 +18,14 @@ This repository contains programs written for the low-level programming and algo
  * 0x0D. C - Structures, typedef
  * 0x0E. C - Function pointers
  * 0x0F. C - Variadic functions
+ * 0x10. C - printf
  * 0x11. C - Singly linked lists
  * 0x12. C - More singly linked lists
  * 0x13. C - Bit manipulation
  * 0x14. C - File I/O
  * 0x16. C - Doubly linked lists
  * 0x17. C - Dynamic libraries
+ * 0x18. C - Stacks, Queues - LIFO, FIFO
 
 ## Author
  * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> - Holberton School student

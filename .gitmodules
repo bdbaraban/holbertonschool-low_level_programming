@@ -1,3 +1,6 @@
 [submodule "0x10-printf"]
 	path = 0x10-printf
 	url = https://github.com/bdbaraban/printf.git
+[submodule "0x18_stacks_queues_lifo_fifo"]
+	path = 0x18_stacks_queues_lifo_fifo
+	url = https://github.com/bdbaraban/monty.git
