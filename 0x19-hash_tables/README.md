@@ -39,6 +39,7 @@ typedef struct shash_table_s
 ```
 
   * Function Prototypes:
+
 | File | Prototype |
 | --- | --- |
 | `0-hash_table_create.c` | `hash_table_t *hash_table_create(unsigned long int size);` |
