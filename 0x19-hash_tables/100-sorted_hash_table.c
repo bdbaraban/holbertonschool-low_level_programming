@@ -52,29 +52,43 @@ shash_table_t *shash_table_create(unsigned long int size)
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	shash_node_t *new, *tmp;
+	char *value_copy;
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	new = malloc(sizeof(shash_node_t));
-	if (new == NULL)
+	value_copy = strdup(value);
+	if (value_copy == NULL)
 		return (0);
 
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->shead;
+	while (tmp)
+	{
+		if (strcmp(tmp->key, key) == 0)
+		{
+			free(tmp->value);
+			tmp->value = value_copy;
+			return (1);
+		}
+		tmp = tmp->snext;
+	}
+
+	new = malloc(sizeof(shash_node_t));
+	if (new == NULL)
+	{
+		free(value_copy);
+		return (0);
+	}
 	new->key = strdup(key);
 	if (new->key == NULL)
 	{
+		free(value_copy);
 		free(new);
 		return (0);
 	}
-	new->value = strdup(value);
-	if (new->value == NULL)
-	{
-		free(new->key);
-		free(new);
-		return (0);
-	}
-	index = key_index((const unsigned char *)key, ht->size);
+	new->value = value_copy;
 	new->next = ht->array[index];
 
 	if (ht->shead == NULL)
@@ -84,7 +98,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		ht->shead = new;
 		ht->stail = new;
 	}
-	else if (*(ht->shead->key) > *key)
+	else if (strcmp(ht->shead->key, key) >= 0)
 	{
 		new->sprev = NULL;
 		new->snext = ht->shead;
@@ -94,7 +108,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		tmp = ht->shead;
-		while (tmp->snext != NULL && *(tmp->snext->key) <= *key)
+		while (tmp->snext != NULL && strcmp(tmp->snext->key, key) < 0)
 			tmp = tmp->snext;
 		new->sprev = tmp;
 		new->snext = tmp->snext;
@@ -145,10 +159,7 @@ void shash_table_print(const shash_table_t *ht)
 	shash_node_t *node;
 
 	if (ht == NULL)
-	{
-		printf("{}\n");
 		return;
-	}
 
 	node = ht->shead;
 	printf("{");
@@ -171,10 +182,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	shash_node_t *node;
 
 	if (ht == NULL)
-	{
-		printf("{}\n");
 		return;
-	}
 
 	node = ht->stail;
 	printf("{");
