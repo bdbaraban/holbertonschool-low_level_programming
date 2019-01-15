@@ -5,6 +5,7 @@ and hash tables in C.
 ## Helper File
 * `hash_tables.h`: Header file containing definitions and prototypes for 
 all types and functions written for the project.
+
 Data Structures:
 ```
 typedef struct hash_node_s
