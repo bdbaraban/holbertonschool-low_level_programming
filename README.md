@@ -26,6 +26,7 @@ This repository contains programs written for the low-level programming and algo
  * 0x16. C - Doubly linked lists
  * 0x17. C - Dynamic libraries
  * 0x18. C - Stacks, Queues - LIFO, FIFO
+ * 0x19. C - Hash tables
 
 ## Author
  * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> - Holberton School student
