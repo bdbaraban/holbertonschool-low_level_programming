@@ -90,6 +90,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 	new->value = value_copy;
 	new->next = ht->array[index];
+	ht->array[index] = new;
 
 	if (ht->shead == NULL)
 	{
