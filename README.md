@@ -1,6 +1,9 @@
-# Low-Level Programming and Algorithm - Hatching Out
+# Low-Level Programming and Algorithm
 
-This repository contains programs written for the low-level programming and algorithm track at Holberton School. In these projects, which occurred within the initial three months of the program, I was introduced to the C programming language. The specific list of projects contained follows:
+This repository contains programs written for the low-level programming and 
+algorithm track at Holberton School. In these projects, which  occurred 
+throughout the duration of the Year 1 curriculum, I learned the C programming 
+language. The specific list of projects contained follows:
 
  * 0x00. C - Hello, World
  * 0x01. C - Variables, if, else, while
@@ -27,12 +30,18 @@ This repository contains programs written for the low-level programming and algo
  * 0x17. C - Dynamic libraries
  * 0x18. C - Stacks, Queues - LIFO, FIFO
  * 0x19. C - Hash tables
+ * 0x1A. C - Sorting algorithms & Big O
 
 ## Author
- * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> - Holberton School student
+ * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> -
+ Holberton School student
 
 ## Acknowledgements
-All work contained in this project was completed as part of the curriculum for Holberton School. Holberton School is a campus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [this link](https://www.holbertonschool.com/).  
+All work contained in this project was completed as part of the curriculum for 
+Holberton School. Holberton School is a campus-based full-stack software 
+engineering program that prepares students for careers in the tech industry 
+using project-based peer learning. For more information, visit 
+[this link](https://www.holbertonschool.com/).  
 
 <p align="center">   
   <img src="http://www.holbertonschool.com/holberton-logo.png">
