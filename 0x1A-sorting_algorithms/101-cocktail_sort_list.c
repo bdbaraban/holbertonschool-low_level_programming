@@ -65,14 +65,13 @@ void swap_backward(listint_t **list, listint_t **shaker, listint_t **tail)
  * cocktail_sort_list - Sort a doubly-linked list of integers in ascending
  *                      order using the cocktail shaker algorithm.
  * @list: A pointer to the thead of a doubly-linked listint_t list.
- *
  */
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *tail, *shaker;
 	char sorted = 1;
 
-	if (list == NULL || *list == NULL)
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
 	for (tail = *list; tail->next != NULL;)
