@@ -40,7 +40,7 @@ int partition(int *array, size_t size, int low, int high)
 	int *pivot, i, j;
 
 	pivot = (array + high);
-	for (i = low, j = low; j <= high - 1; j++)
+	for (i = low, j = low; j < high; j++)
 	{
 		if (array[j] < *pivot)
 		{
@@ -92,7 +92,7 @@ void sort(int *array, size_t size, int low, int high)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (array == NULL || size <= 1)
+	if (array == NULL || size < 2)
 		return;
 
 	sort(array, size, 0, size - 1);
