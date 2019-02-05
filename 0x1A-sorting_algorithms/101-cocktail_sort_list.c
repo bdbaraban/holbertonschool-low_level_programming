@@ -5,22 +5,18 @@
 
 #include "sort.h"
 
-void swap_forward(listint_t **list, listint_t **spoon,
-		listint_t **shaker, listint_t **tail);
-void swap_backward(listint_t **list, listint_t **spoon,
-		listint_t **shaker, listint_t **tail);
+void swap_forward(listint_t **list, listint_t **shaker, listint_t **tail);
+void swap_backward(listint_t **list, listint_t **shaker, listint_t **tail);
 void cocktail_sort_list(listint_t **list);
 
 /**
  * swap_forward - Swap a node in a doubly-linked list of
  *                integers with the node ahead of it.
  * @list: A pointer to the head of a doubly-linked list of integers.
- * @spoon: A pointer to the current tracking node of the cocktail shaker algo.
  * @shaker: A pointer to the current swapping node of the cocktail shaker algo.
  * @tail: A pointer to the tail of the doubly-linked list.
  */
-void swap_forward(listint_t **list, listint_t **spoon,
-		listint_t **shaker, listint_t **tail)
+void swap_forward(listint_t **list, listint_t **shaker, listint_t **tail)
 {
 	listint_t *tmp = (*shaker)->next;
 
@@ -37,20 +33,16 @@ void swap_forward(listint_t **list, listint_t **spoon,
 	(*shaker)->prev = tmp;
 	tmp->next = *shaker;
 	*shaker = tmp;
-	if (*spoon == *shaker)
-		(*spoon) = (*shaker)->next;
 }
 
 /**
  * swap_backward - Swap a node in a doubly-linked list of
  *                 integers with the node ahead of it.
  * @list: A pointer to the head of a doubly-linked list of integers.
- * @spoon: A pointer to the current tracking node of the cocktail shaker algo.
  * @shaker: A pointer to the current swapping node of the cocktail shaker algo.
  * @tail: A pointer to the tail of the doubly-linked list.
  */
-void swap_backward(listint_t **list, listint_t **spoon,
-		listint_t **shaker, listint_t **tail)
+void swap_backward(listint_t **list, listint_t **shaker, listint_t **tail)
 {
 	listint_t *tmp = (*shaker)->prev;
 
@@ -67,8 +59,6 @@ void swap_backward(listint_t **list, listint_t **spoon,
 	(*shaker)->next = tmp;
 	tmp->prev = *shaker;
 	*shaker = tmp;
-	if (*spoon == *shaker)
-		*spoon = (*shaker)->prev;
 }
 
 /**
@@ -79,7 +69,8 @@ void swap_backward(listint_t **list, listint_t **spoon,
  */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *tail, *spoon, *shaker;
+	listint_t *tail, *shaker;
+	char sorted = 1;
 
 	if (list == NULL || *list == NULL)
 		return;
@@ -87,28 +78,25 @@ void cocktail_sort_list(listint_t **list)
 	for (tail = *list; tail->next != NULL;)
 		tail = tail->next;
 
-	for (; tail != *list; tail = tail->prev)
+	while (sorted == 1)
 	{
-		for (spoon = *list; spoon != tail; spoon = spoon->next)
+		sorted = 0;
+		for (shaker = *list; shaker != tail; shaker = shaker->next)
 		{
-			shaker = spoon;
-			for (; shaker != tail; shaker = shaker->next)
+			if (shaker->n > shaker->next->n)
 			{
-				if (shaker->n > shaker->next->n)
-				{
-					swap_forward(list, &spoon,
-							&shaker, &tail);
-					print_list((const listint_t *)*list);
-				}
+				swap_forward(list, &shaker, &tail);
+				print_list((const listint_t *)*list);
+				sorted = 1;
 			}
-			for (; shaker != spoon; shaker = shaker->prev)
+		}
+		for (shaker = shaker->prev; shaker != *list; shaker = shaker->prev)
+		{
+			if (shaker->n < shaker->prev->n)
 			{
-				if (shaker->n < shaker->prev->n)
-				{
-					swap_backward(list, &spoon,
-							&shaker, &tail);
-					print_list((const listint_t *)*list);
-				}
+				swap_backward(list, &shaker, &tail);
+				print_list((const listint_t *)*list);
+				sorted = 1;
 			}
 		}
 	}
