@@ -39,23 +39,20 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 	int *pivot, above, below;
 
 	pivot = array + right;
-	for (above = left, below = right - 1; above < below;)
+	for (above = below = left; below < right; below++)
 	{
-		while (above < right && array[above] < *pivot)
-			above++;
-		while (below > left && array[below] > *pivot)
-			below--;
-
-		if (above < below)
+		if (array[below] < *pivot)
 		{
-			swap(array + above, array + below);
-			print_array(array, size);
+			if (above < below)
+			{
+				swap(array + below, array + above);
+				print_array(array, size);
+			}
 			above++;
-			below--;
 		}
 	}
 
-	if (array[above] > *pivot && above < right)
+	if (array[above] > *pivot)
 	{
 		swap(array + above, pivot);
 		print_array(array, size);
@@ -77,7 +74,7 @@ void lomuto_sort(int *array, size_t size, int left, int right)
 {
 	int part;
 
-	if (right - left > 1)
+	if (right - left > 0)
 	{
 		part = lomuto_partition(array, size, left, right);
 		lomuto_sort(array, size, left, part - 1);
