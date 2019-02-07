@@ -82,7 +82,7 @@ void swap_node_behind(listint_t **list, listint_t **tail, listint_t **mid,
  */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *tail, *mid, *spoon, *shaker;
+	listint_t *tail, *mid, *spoon, *shaker, *tmp;
 	bool shaken_not_stirred = false;
 	size_t nodes = 0, n = 0;
 
@@ -97,6 +97,7 @@ void cocktail_sort_list(listint_t **list)
 	spoon = *list;
 	while (shaken_not_stirred == false && spoon != mid)
 	{
+		tmp = spoon->next;
 		shaken_not_stirred = true;
 		for (shaker = *list; shaker != tail; shaker = shaker->next)
 		{
@@ -117,6 +118,6 @@ void cocktail_sort_list(listint_t **list)
 				shaken_not_stirred = false;
 			}
 		}
-		spoon = spoon->next;
+		spoon = tmp;
 	}
 }
