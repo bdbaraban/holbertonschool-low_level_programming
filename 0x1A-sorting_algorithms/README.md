@@ -21,6 +21,7 @@ typedef struct listint_s
 ```
 
 Function Prototypes:
+
 | File                       | Prototype                                         |
 | -------------------------- | ------------------------------------------------- |
 | `print_array.c`            | `void print_array(const int *array, size_t size)` |
@@ -66,6 +67,7 @@ typedef struct deck_node_s
 ```
 
 Function Prototype:
+
 | File               | Prototype                             |
 | ------------------ | ------------------------------------- |
 | `1000-deck_node.c` | `void sort_deck(deck_node_t **deck);` |
