@@ -42,10 +42,7 @@ int hoare_partition(int *array, size_t size, int left, int right)
 	int pivot, above, below;
 
 	pivot = array[right];
-	above = left;
-	below = right;
-
-	while (1)
+	for (above = left, below = right;; above++, below--)
 	{
 		while (array[above] < pivot)
 			above++;
@@ -60,7 +57,6 @@ int hoare_partition(int *array, size_t size, int left, int right)
 			swap_ints(array + above, array + below);
 			print_array(array, size);
 		}
-		above++;
 	}
 }
 
