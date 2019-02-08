@@ -5,17 +5,17 @@
 
 #include "sort.h"
 
-void swap(int *a, int *b);
+void swap_ints(int *a, int *b);
 int hoare_partition(int *array, size_t size, int left, int right);
 void hoare_sort(int *array, size_t size, int left, int right);
 void quick_sort_hoare(int *array, size_t size);
 
 /**
- * swap - Swap two integers in an array.
+ * swap_ints - Swap two integers in an array.
  * @a: The first integer to swap.
  * @b: The second integer to swap.
  */
-void swap(int *a, int *b)
+void swap_ints(int *a, int *b)
 {
 	int tmp;
 
@@ -42,25 +42,23 @@ int hoare_partition(int *array, size_t size, int left, int right)
 	int pivot, above, below;
 
 	pivot = array[right];
-	for (above = left, below = right; above < below;)
+	above = left;
+	below = right;
+
+	while (1)
 	{
 		while (array[above] < pivot)
 			above++;
 		while (array[below] > pivot)
 			below--;
 
-		if (above < below)
-		{
-			if (array[above] > array[below])
-			{
-				swap(array + above, array + below);
-				print_array(array, size);
-			}
-			above++;
-		}
-	}
+		if (above >= below)
+			return (above);
 
-	return (above);
+		swap_ints(array + above, array + below);
+		print_array(array, size);
+		above++;
+	}
 }
 
 /**
@@ -91,7 +89,7 @@ void hoare_sort(int *array, size_t size, int left, int right)
  * @size: The size of the array.
  *
  * Description: Uses the Hoare partition scheme. Prints
- *              the array after each swap of two elements.
+ * the array after each swap of two elements.
  */
 void quick_sort_hoare(int *array, size_t size)
 {
