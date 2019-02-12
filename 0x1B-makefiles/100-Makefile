@@ -17,4 +17,4 @@ oclean:
 
 fclean: clean oclean
 
-re: oclean $(OBJ)
+re: fclean all 
