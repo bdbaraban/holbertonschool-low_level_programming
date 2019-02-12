@@ -32,6 +32,7 @@ working in the C language. The specific list of projects contained follows:
  * 0x18. C - Stacks, Queues - LIFO, FIFO
  * 0x19. C - Hash tables
  * 0x1A. C - Sorting algorithms & Big O
+ * 0x1B. C - Makefiles
 
 ## Author
  * __Brennan D Baraban__ <[bdbaraban](https://github.com/bdbaraban)> -
