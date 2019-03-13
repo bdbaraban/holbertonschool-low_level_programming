@@ -4,6 +4,3 @@
 [submodule "0x18_stacks_queues_lifo_fifo"]
 	path = 0x18_stacks_queues_lifo_fifo
 	url = https://github.com/bdbaraban/monty.git
-[submodule "0x1C-binary_trees"]
-	path = 0x1C-binary_trees
-	url = https://github.com/bdbaraban/0x1C-binary_trees
