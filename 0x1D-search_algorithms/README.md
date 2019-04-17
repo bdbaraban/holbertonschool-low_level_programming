@@ -110,12 +110,17 @@ int **allocate_map(int n, int m)
 ```
 
 * **7. Jump search**
-  * [100-jump.c](./100-jump.c)
-* Write a function that searches for a value in a sorted array of integers using the Jump search algorithm
+  * [100-jump.c](./100-jump.c): C function that searches for a value in a
+sorted array of integers using jump search.
+  * Uses the square root of the size of the array as the jump step.
+  * Assumes the array is sorted in ascending order and that the value to search
+for is not repeated in the array.
+  * If the value is not present or the array is `NULL`, returns `-1`.
+	* Otherwise, returns the index where `value` is located.
 
 * **8. Big O #5**
-  * [101-O](./101-O)
-* What is the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)?
+  * [101-O](./101-O): Text file containing the average case time complexity of
+jump search in an array of size `n` using `step = sqrt(n)`.
 
 * **9. Interpolation search**
   * [102-interpolation.c](./102-interpolation.c)
