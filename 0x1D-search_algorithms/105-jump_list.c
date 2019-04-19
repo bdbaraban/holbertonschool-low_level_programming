@@ -23,7 +23,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t step, step_size, s;
 	listint_t *node, *jump;
 
-	if (list == NULL)
+	if (list == NULL || size == 0)
 		return (NULL);
 
 	for (step = step_size = sqrt(size), jump = list; jump->index < step;)
@@ -33,7 +33,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		jump = jump->next;
 	}
 
-	for (node = list; node->index < size && node->n < value;)
+	for (node = list; node->n < value;)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
 		if (jump->index + 1 >= size || jump->n > value)
@@ -50,14 +50,12 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	printf("Value found between indexes [%ld] and [%ld]\n",
 			node->index, jump->index);
 
-	for (; node->index < size && node->n < value; node = node->next)
+	for (; node->n < value; node = node->next)
 	{
 		if (node->index + 1 >= size)
 			break;
 		printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 	}
-	if (size > 0)
-		printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 
-	return (node->index < size && node->n == value ? node : NULL);
+	return (node->n == value ? node : NULL);
 }
