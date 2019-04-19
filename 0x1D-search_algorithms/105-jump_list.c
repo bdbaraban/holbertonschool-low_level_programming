@@ -55,9 +55,9 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	{
 		if (node->index + 1 >= size)
 			break;
-		printf("Value checked index [%ld] = [%d]\n", node->index, node->n);
+		printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 	}
-	printf("Value checked index [%ld] = [%d]\n", node->index, node->n);
+	printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
 
 	return (node->n == value ? node : NULL);
 }
