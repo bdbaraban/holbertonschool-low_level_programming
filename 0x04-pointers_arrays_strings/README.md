@@ -3,9 +3,12 @@
 In this project, I learned about what and how to use pointers and arrays and
 the differences between the two as well as how to use and manipulate strings in C.
 
-## Helper Files :file_folder:
+## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
+
+## Header File :file_folder:
+
 * [holberton.h](holberton.h): Header file containing prototypes for all functions written in the project.
 
 | File              | Prototype                               |
