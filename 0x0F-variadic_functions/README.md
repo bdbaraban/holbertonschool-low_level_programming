@@ -3,7 +3,7 @@
 In this project, I learned about using variadic functions with the `va_start`,
 `va_arg`, and `va_end` macros as well as why and how to use the `const` type qualifier in C.
 
-## Helper File :file_folder:
+## Header File :file_folder:
 
 * [variadic_functions.h](./variadic_functions.h): Header file containing definitions and
 prototypes for all types and functions written in the project.
