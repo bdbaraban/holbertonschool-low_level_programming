@@ -27,6 +27,7 @@ working in the C language. The specific list of projects contained follows:
 * [0x12. C - More singly linked lists](./0x12-more_singly_linked_lists)
 * [0x13. C - Bit manipulation](./0x13-bit_manipulation)
 * [0x14. C - File I/O](./0x14-file_io)
+* [0x14. C - Simple Shell](https://github.com/bdbaraban/simple_shell/tree/master)
 * [0x16. C - Doubly linked lists](./0x16-doubly_linked_lists)
 * [0x17. C - Dynamic libraries](./0x17-dynamic_libraries)
 * [0x18. C - Stacks, Queues - LIFO, FIFO](./0x18_stacks_queues_lifo_fifo)
