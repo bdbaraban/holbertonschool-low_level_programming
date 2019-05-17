@@ -1,10 +1,13 @@
 # C - Static libraries
-In this project, I learned what static libraries are and practiced creating and using them with `ar`, `ranlib`, and `nm`.
 
-## Tasks
+In this project, I learned what static libraries are and practiced creating and
+using them with `ar`, `ranlib`, and `nm`.
+
+## Tasks :page_with_curl:
 
 * **A library is not a luxury but one of the necessities of life**
-  * `libholberton.a`: C Static library containing all the functions listed below:
+  * [libholberton.a](./libholberton.a): C Static library containing all the functions
+  listed below:
     * `int _putchar(char c);`
     * `int _islower(int c);`
     * `int _isalpha(int c);`
@@ -26,7 +29,9 @@ In this project, I learned what static libraries are and practiced creating and 
     * `char *_strpbrk(char *s, char *accept);`
     * `char *_strstr(char *haystack, char *needle);`
 
-  * `holberton.h`: Header file containing the prototypes of all functions included in `libholberton.a`.
+  * [holberton.h](./holberton.h): Header file containing the prototypes of all functions
+  included in `libholberton.a`.
 
 * **Without libraries what have we? We have no past and no future**
-  * `create_static_lib.sh`: Bash script that creates a static library called `liball.a` from all the `.c` files in the current directory.
+  * [create_static_lib.sh](./create_static_lib.sh): Bash script that creates a static
+  library called `liball.a` from all the `.c` files in the current directory.
