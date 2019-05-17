@@ -5,7 +5,7 @@ using them with `ar`, `ranlib`, and `nm`.
 
 ## Tasks :page_with_curl:
 
-* **A library is not a luxury but one of the necessities of life**
+* **0. A library is not a luxury but one of the necessities of life**
   * [libholberton.a](./libholberton.a): C Static library containing all the functions
   listed below:
     * `int _putchar(char c);`
@@ -32,6 +32,6 @@ using them with `ar`, `ranlib`, and `nm`.
   * [holberton.h](./holberton.h): Header file containing the prototypes of all functions
   included in `libholberton.a`.
 
-* **Without libraries what have we? We have no past and no future**
+* **1. Without libraries what have we? We have no past and no future**
   * [create_static_lib.sh](./create_static_lib.sh): Bash script that creates a static
   library called `liball.a` from all the `.c` files in the current directory.
