@@ -3,7 +3,7 @@
 In this project, I practiced building and using singly linked lists
 in C while learning when and why to use linked lists versus arrays.
 
-## Helper File :file_folder:
+## Header File :file_folder:
 
 * [lists.h](./lists.h): Header file containing definitions and prototypes for all
 types and functions written for the project.
