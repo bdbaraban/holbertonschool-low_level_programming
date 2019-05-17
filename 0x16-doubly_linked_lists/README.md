@@ -2,7 +2,7 @@
 
 In this project, I learned about using doubly-linked lists in C.
 
-# Helper Files :file_folder:
+# Header File :file_folder:
 
 * [lists.h](./lists.h): Header file containing definitions and prototypes for all types
 and functions written for the project.
