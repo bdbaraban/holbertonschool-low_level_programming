@@ -7,6 +7,3 @@
 [submodule "0x1C-binary_trees"]
 	path = 0x1C-binary_trees
 	url = https://github.com/bdbaraban/0x1C-binary_trees.git
-[submodule "simple_shell"]
-	path = simple_shell
-	url = https://github.com/bdbaraban/simple_shell
