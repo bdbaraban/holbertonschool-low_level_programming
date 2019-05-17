@@ -3,7 +3,7 @@
 In this project, I learned about function pointers in C - what they hold,
 where they point in virtual memory, and how to use them.
 
-## Helper Files :file_folder:
+## Header File :file_folder:
 
 * [function_pointers.h](./function_pointers.h): Header file containing prototypes
 for all functions written for programs 0-2 of the project.
