@@ -1,11 +1,13 @@
 # C - Dynamic libraries
 
-In this project, learned about using dynamic libraries in C, including how to create them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
+In this project, learned about using dynamic libraries in C, including how to create
+them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
 
-## Tasks
+## Tasks :page_with_curl:
 
-* **A library is not a luxury but one of the necessities of life**
-  * `libholberton.so`: C dynamic library containing all the functions listed below:
+* **0. A library is not a luxury but one of the necessities of life**
+  * [libholberton.so](./libholberton.so): C dynamic library containing all the functions
+  listed below:
     * `int _putchar(char c);`
     * `int _islower(int c);`
     * `int _isalpha(int c);`
@@ -27,13 +29,16 @@ In this project, learned about using dynamic libraries in C, including how to cr
     * `char *_strpbrk(char *s, char *accept);`
     * `char *_strstr(char *haystack, char *needle);`
 
-  * `holberton.h`: Header file containing the prototypes of all functions included in `libholberton.so`.
+  * [holberton.h](./holberton.h): Header file containing the prototypes of all functions
+  included in `libholberton.so`.
 
-* **Without libraries what have we? We have no past and no future**
-  * `1-create_dynamic_lib.sh`: Bash script that creates a dynamic library called `liball.so` from all the `.c` files in the current directory.
+* **1. Without libraries what have we? We have no past and no future**
+  * [1-create_dynamic_lib.sh](./1-create_dynamic_lib.sh): Bash script that creates a
+  dynamic library called `liball.so` from all the `.c` files in the current directory.
 
-* **Let's call C functions from Python**
-  * `100-operations.so`: C dynamic library containing basic C mathematical operation functions that can be called from Python.
+* **2. Let's call C functions from Python**
+  * [100-operations.so](./100-operations.so): C dynamic library containing basic C
+  mathematical operation functions that can be called from Python.
   * Includes:
     * `int add(int a, int b);`
     * `int sub(int a, int b);`
