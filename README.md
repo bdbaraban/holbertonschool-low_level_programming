@@ -22,7 +22,7 @@ working in the C language. The specific list of projects contained follows:
 * [0x0D. C - Structures, typedef](./0x0D-structures_typedef)
 * [0x0E. C - Function pointers](./0x0E-function_pointers)
 * [0x0F. C - Variadic functions](./0x0F-variadic_functions)
-* [0x10. C - printf](./0x10-printf)
+* [0x10. C - printf](https://github.com/bdbaraban/printf/tree/master)
 * [0x11. C - Singly linked lists](./0x11-singly_linked_lists)
 * [0x12. C - More singly linked lists](./0x12-more_singly_linked_lists)
 * [0x13. C - Bit manipulation](./0x13-bit_manipulation)
