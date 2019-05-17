@@ -2,9 +2,12 @@
 
 In this project, I continued to learn about using nested loops and writing functions in C.
 
-## Helper Files :file_folder:
+## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
+
+## Header File :file_folder:
+
 * [holberton.h](./holberton.h): Header file containing prototypes for all functions written in the project.
 
 | File                     | Prototype                        |
