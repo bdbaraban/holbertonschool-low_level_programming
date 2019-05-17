@@ -2,9 +2,12 @@
 
 In this project, I continued to practice using pointers, arrays and strings in C.
 
-## Helper Files :file_folder:
+## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
+
+## Header File :file_folder:
+
 * [holberton.h](./holberton.h): Header file containing prototypes for all
 functions written in the project.
 
