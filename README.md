@@ -33,7 +33,7 @@ working in the C language. The specific list of projects contained follows:
 * [0x19. C - Hash tables](./0x19-hash_tables)
 * [0x1A. C - Sorting algorithms & Big O](./0x1A-sorting_algorithms)
 * [0x1B. C - Makefiles](./0x1B-makefiles)
-* [0x1C. C - Binary trees](./0x1C-binary_trees)
+* [0x1C. C - Binary trees](https://github.com/bdbaraban/0x1C-binary_trees/tree/master)
 * [0x1D. C - Search Algorithms](./0x1D-search_algorithms)
 
 ## Author :black_nib:
