@@ -4,6 +4,10 @@ In this project, I learned about what and how to use pointers to pointers
 and multidimensional arrays in C as well as the most common C standard library
 functions to manipulate strings.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files for all tasks. Provided by Holberton School.
+
 ## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
