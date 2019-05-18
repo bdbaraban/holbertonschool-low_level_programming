@@ -3,6 +3,10 @@
 In this project, I practiced building and using singly linked lists
 in C while learning when and why to use linked lists versus arrays.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
 ## Header File :file_folder:
 
 * [lists.h](./lists.h): Header file containing definitions and prototypes for all
