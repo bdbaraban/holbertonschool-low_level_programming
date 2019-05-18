@@ -2,6 +2,10 @@
 
 In this project, I implemented twelve different sorting algorithms.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
 ## Helper Files :raised_hands:
 
 * [print_array.c](./print_array.c): C function that prints an array of
