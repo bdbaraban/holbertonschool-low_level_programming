@@ -3,6 +3,10 @@
 In this project, I learned how to manipulate bits and use the
 bitwise operators `>>`, `<<`, `&`, `|`, and `^` in C.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
 ## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
