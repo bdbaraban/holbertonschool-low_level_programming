@@ -2,6 +2,10 @@
 
 In this project, I learned about recursion in C.
 
+## Tests
+
+* [tests](./tests): Folder of test files for all tasks. Provided by Holberton School.
+
 ## Helper File :raised_hands:
 
 * [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
