@@ -2,6 +2,10 @@
 
 In this project, I practiced writing Makefiles.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
 ## Helper Files :raised_hands:
 
 * [holberton.c](./holberton.c): C function that displays a seahorse in text.
