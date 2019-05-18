@@ -6,6 +6,10 @@ practiced using the I/O system calls `open`, `close`, `read`, and `write`
 and the flags `O_RDONLY`, `WR_ONLY`, and `O_RDWR` to create, open, close,
 read, write, set permissions of files in C.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
 ## Header File :file_folder:
 
 * [holberton.h](./holberton.h): Header file containing prototypes for all functions
