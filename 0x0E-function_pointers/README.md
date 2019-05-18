@@ -3,6 +3,10 @@
 In this project, I learned about function pointers in C - what they hold,
 where they point in virtual memory, and how to use them.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
 ## Header Files :file_folder:
 
 * [function_pointers.h](./function_pointers.h): Header file containing prototypes
