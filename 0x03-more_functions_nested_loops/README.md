@@ -4,7 +4,7 @@ In this project, I continued to learn about using nested loops and writing funct
 
 ## Tests :heavy_check_mark:
 
-* [tests](./tests): Folder of test files for all tasks. Provided by Holberton School.
+* [tests](./tests): Folder of test files. Provided by Holberton School.
 
 ## Helper File :raised_hands:
 
