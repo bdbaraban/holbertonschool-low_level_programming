@@ -2,6 +2,10 @@
 
 In this project, I learned about using structures and `typedef` in C.
 
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files for all tasks. Provided by Holberton School.
+
 ## Header File :file_folder:
 
 * [dog.h](./dog.h): Header file containing definitions and prototypes for all types
