@@ -1,39 +1,42 @@
-/*
- * File: 102-print_comb5.c
- * Auth: Brennan D Baraban
- */
-
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of two two-digit numbers,
- *        ranging from 0-99, separated by a comma followed by a space.
- *
- * Return: Always 0.
+ *main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
+ *Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int num1, num2;
+	int tens;
+	int units;
+	int t;
+	int u;
 
-	for (num1 = 0; num1 <= 98; num1++)
+	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
 	{
-		for (num2 = num1 + 1; num2 <= 99; num2++)
+		for (units = '0'; units <= '9'; units++)
 		{
-			putchar((num1 / 10) + '0');
-			putchar((num1 % 10) + '0');
-			putchar(' ');
-			putchar((num2 / 10) + '0');
-			putchar((num2 % 10) + '0');
+		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
+			{
+				for (u = units + 1; u <= '9'; u++)
+				{
+					putchar(tens);
+					putchar(units);
+					putchar(' ');
+					putchar(t);
+					putchar(u);
 
-			if (num1 == 98 && num2 == 99)
-				continue;
-
-			putchar(',');
-			putchar(' ');
-		}
-	}
-
+					if (!((tens == '9' && units == '8') &&
+					      (t == '9' && u == '9')))
+					{
+						putchar(',');  /* inserting commas */
+						putchar(' ');
+					} /* end of IF statement */
+				}  /* end of last FOR loop */
+			}  /* end of  second to last loop */
+		}   /* end of the second loop */
+	}    /* end of  the nested loop */
 	putchar('\n');
 
 	return (0);
-}
+} /* end of  main */
