@@ -1,9 +1,4 @@
-/*
- * File: 0-read_textfile.c
- * Auth: Brennan D Baraban
- */
-
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
